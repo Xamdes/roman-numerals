@@ -13,12 +13,21 @@ $(function()
     var romanIntNumElements = (romanIntegers.length-1);
     var output = "";
     var input = parseInt($("#input").val().trim());
+    var inputArray = input.toString().split("");
 
-    for(var index = 0; index <= romanIntNumElements; index++)
+    for(var indexTop = 0; indexTop <= inputArray.length;indexTop++)
     {
-      var inputArray = input.toString().split("");
-      console.log("Index: "+index+" | array: "+inputArray);
-      var tempSwitch = inputArray[index];
+
+      console.log("Index: "+indexTop+" | array: "+inputArray+" | input: "+input);
+      var tempSwitch = inputArray[indexTop];
+
+
+      if(tempSwitch === NaN || tempSwitch === undefined)
+      {
+        break;
+      }
+
+      console.log(tempSwitch);
 
       if(tempSwitch==="4")
       {
@@ -28,28 +37,34 @@ $(function()
         output += "";
         console.log("4"+inputArray.shift());
         input = parseInt(inputArray.join(""));
+        indexTop = -1;
       }
       else if(tempSwitch==="9")
       {
         output += "";
         console.log("9"+inputArray.shift());
         input = parseInt(inputArray.join(""));
+        indexTop = -1;
       }
       else
       {
-        var value = romanIntegers[index];
-        var temp = input-value;
-        if(temp>=0)
+        for(var index = romanIntNumElements; index >=0 ; index--)
         {
-          console.log("Val: "+value+" Temp: "+temp);
-          input = temp;
-          romanCounter[index]++;
-          index = romanIntNumElements;
-          output += (convertToRoman(value).toString());
+          var value = romanIntegers[index];
+          console.log(input);
+          var temp = input-value;
+          if(temp>=0)
+          {
+            console.log("Val: "+value+" Temp: "+temp);
+            input = temp;
+            romanCounter[index]++;
+            index = romanIntNumElements;
+            output += (convertToRoman(value).toString());
+          }
         }
       }
-
     }
+
 
     //output = isRomanNumeral(input,romanStrings,romanIntegers);
     //console.log(romanCounter);
