@@ -33,7 +33,9 @@ M       1,000
 
 ## Specifications Outline:
 
-1. Find Current Numeral
+1. Check if number matches a roman numer 1,5,10,etc...
+2. Check can turn other numbers into Numerals
+3. Add logic to determine which direction numerals should be made to keep it less than 3 characters in a row
 
 ## Technology Used
 
