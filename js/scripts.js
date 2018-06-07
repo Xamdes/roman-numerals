@@ -6,7 +6,7 @@ $(function()
   $("#form-one").submit(function(event)
   {
     event.preventDefault();
-    var romanIntNumElements = (romanIntegers.length);
+    var romanIntNumElements = romanIntegers.length;
     var output = "";
     var input = parseInt($("#input").val().trim());
 
