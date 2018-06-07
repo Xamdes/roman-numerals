@@ -5,6 +5,7 @@ $(function()
     event.preventDefault();
     var romanStrings = ["I","V","X","L","C","D","M"];
     var romanIntegers = [1,5,10,50,100,500,1000];
+    var romanCounter = [0,0,0,0,0,0,0];
     var romanIntNumElements = (romanIntegers.length-1);
     var output = "";
     var input = parseInt($("#input").val().trim());
@@ -18,15 +19,14 @@ $(function()
       if(temp>=0)
       {
         input = temp;
-        index = romanIntNumElements;
+        romanCounter[index]++;
+        index = romanIntNumElements;        
         output += (isRomanNumeral(value,romanStrings,romanIntegers).toString());
       }
     }
 
-
-
     //output = isRomanNumeral(input,romanStrings,romanIntegers);
-
+    console.log(romanCounter);
     $("#output").text(output);
     //$("#input").val("");
   });
