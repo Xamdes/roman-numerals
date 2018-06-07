@@ -2,3 +2,20 @@ body  {
   background-color: lightcyan;
   font-size: 1.5em;
 }
+
+.panel-modifier {
+  padding: 8px;
+  background-color: azure;
+}
+
+.btn-col {
+  background-color: lightgreen;
+}
+
+.div-modifier {
+  padding: 8px;
+}
+
+.input-modifier {
+  width: 350px;
+}

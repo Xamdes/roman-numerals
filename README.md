@@ -33,6 +33,8 @@ M       1,000
 
 ## Specifications Outline:
 
+1. Find Current Numeral
+
 ## Technology Used
 
 HTML, CSS, Javascript, jQuery, arrays
