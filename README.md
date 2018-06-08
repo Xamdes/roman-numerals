@@ -43,8 +43,8 @@ HTML, CSS, Javascript, jQuery, arrays
 
 ## Installation
 Clone from:
-https://github.com/Xamdes/roman-numerals.git
-https://github.com/MattStaudacher/roman-numerals.git
+https://github.com/Xamdes/roman-numerals.git  
+https://github.com/BatesColin/roman-numerals.git  
 
 ## License
 
